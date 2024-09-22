@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { PhoneCall } from 'lucide-react'
 const Navbar = () => {
     return (
-        <nav className='bg-white '>
+        <nav className='bg-white border-b-4 border-b-[#ff3726]'>
             <div className='container h-[88px] flex items-center justify-between'>
                 <Link href={'/'}>
                     <Image src={Logo} alt="logo" />
