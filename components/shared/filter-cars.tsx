@@ -26,7 +26,7 @@ const FilterCars = () => {
     const [date, setDate] = React.useState<Date>()
 
     return (
-        <div className='w-full h-[500px] flex flex-col justify-center items-start pt-8 gap-20' style={{ background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/brand-bg.webp')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className='w-full h-[500px] flex flex-col justify-center items-start pt-8 gap-20' style={{ backgroundImage: ` url('/brand-bg.webp')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className='w-[1170px] mx-auto flex justify-between items-end gap-4 bg-white rounded-xl p-10'>
                 <div className="grid w-full  items-center gap-4">
                     <Label htmlFor="location">Pick-up Location</Label>
@@ -115,24 +115,24 @@ const FilterCars = () => {
                 <Button className='h-[50px]' size={'lg'}>Find a Car</Button>
             </div>
             <Marquee className='m-0 flex gap-8' gradient={false} pauseOnHover gradientWidth={300} loop={5}>
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/01.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/02.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/03.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/04.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/05.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/06.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/07.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/08.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/09.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/01.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/02.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/03.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/04.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/05.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/06.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/07.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/08.png'} alt="brand logo" width={150} height={50} />
-                <Image className='mx-8' src={'https://pixydrops.com/remons/assets/img/brand/09.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/01.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/02.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/03.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/04.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/05.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/06.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/07.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/08.png'} alt="brand logo" width={200} height={70} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/09.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/01.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/02.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/03.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/04.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/05.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/06.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/07.png'} alt="brand logo" width={150} height={50} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/08.png'} alt="brand logo" width={200} height={70} />
+                <Image className='mx-8 contrast-200' src={'https://pixydrops.com/remons/assets/img/brand/09.png'} alt="brand logo" width={150} height={50} />
             </Marquee>
         </div>
     )

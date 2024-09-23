@@ -1,3 +1,4 @@
+import CarModels from "@/components/shared/car-models";
 import FilterCars from "@/components/shared/filter-cars";
 import Hero from "@/components/shared/hero";
 import Navbar from "@/components/shared/navbar";
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FilterCars />
+      <CarModels />
     </main>
   );
 }
