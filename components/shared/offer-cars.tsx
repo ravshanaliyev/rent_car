@@ -38,7 +38,7 @@ const OfferCars = () => {
                     data.map((item) => (
                         <div key={item.id} className="car-card relative w-full  max-w-[400px] rounded-xl bg-white  shadow-lg overflow-hidden  transition duration-500  hover:shadow-2xl " >
                             <div className=' max-w-[400px] w-full '>
-                            <Image src={item.img} alt={item.name} className=" w-full transition-transform duration-300 transform  object-cover h-[266px] " width={400} height={266} />
+                            <Image src={item.img} alt={item.name} className="car-image w-full transition-transform duration-300 transform  object-cover h-[266px] " width={400} height={266} />
                             </div>
                             <div className='py-[35px] px-[25px] relative'>
                                 <button className='py-[8px] px-[14px] rounded-[10px] bg-[#005cb5] text-[14px] text-white absolute top-[-20px] right-[25px]'>2024 Model</button>
