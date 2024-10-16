@@ -94,7 +94,7 @@ const Footer = () => {
                       key={index}
                       className="relative w-full h-16 rounded-lg overflow-hidden group"
                     >
-                      <img
+                      <Image
                         src={imgSrc}
                         alt={`Gallery ${index}`}
                         className="w-full h-full object-cover"
