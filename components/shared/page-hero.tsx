@@ -4,11 +4,9 @@ import React from 'react';
 import SingleCarBanner from "../../app/assets/images/SingleCarBanner.jpg";
 import Image from 'next/image';
 
-interface PageHeroProps {
-  title: string;
-}
 
-const PageHero: React.FC<PageHeroProps> = ({ title }) => {
+
+const PageHero = ({ title }: any) => {
   return (
     <div className="relative w-full h-[380px]">
       {/* Image */}

@@ -22,6 +22,9 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
     const [pickupDate, setPickupDate] = React.useState(null);
     const [dropoffDate, setDropoffDate] = React.useState<any>();
 
+    console.log(params.id);
+    
+
     const KeyFeatures = [
         {
             type: "Body",
