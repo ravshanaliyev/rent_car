@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { Label } from "../../../components/ui/label";
@@ -19,10 +19,14 @@ import PageHero from "@/components/shared/page-hero";
 
 const CarDetail = ({ params }: { params: { id: string } }) => {
     const [date, setDate] = React.useState<Date>();
-    const [pickupDate, setPickupDate] = React.useState(null);
+    const [pickupDate, setPickupDate] = React.useState<any>();
     const [dropoffDate, setDropoffDate] = React.useState<any>();
 
-    console.log(params.id);
+    useEffect(() => {
+        console.log(params.id);
+        setPickupDate(new Date());
+    }, []);
+
     
 
     const KeyFeatures = [
