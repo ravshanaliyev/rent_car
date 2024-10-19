@@ -87,6 +87,10 @@ body {
   }
 }
 
+.custom-rounded{
+  border-radius: 10px 10px 0 0 ;
+}
+
 @layer base {
   * {
     @apply border-border;
