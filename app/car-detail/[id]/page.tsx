@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { Label } from "../../../components/ui/label";
@@ -21,6 +21,35 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
     const [date, setDate] = React.useState<Date>();
     const [pickupDate, setPickupDate] = React.useState<any>();
     const [dropoffDate, setDropoffDate] = React.useState<any>();
+
+    const [SingleData, setSingleData] = useState<any>();
+
+    console.log(SingleData);
+    
+
+    const data = [
+        {
+            id: 1,
+            name: 'Hyundai Accent Limited',
+            img: 'https://pixydrops.com/remons/assets/img/car/popular-car-1.jpg'
+        },
+        {
+            id: 2,
+            name: 'Hyundai Accent Limited',
+            img: 'https://pixydrops.com/remons/assets/img/car/popular-car-2.jpg'
+        },
+        {
+            id: 3,
+            name: 'Hyundai Accent Limited',
+            img: 'https://pixydrops.com/remons/assets/img/car/popular-car-3.jpg'
+        },
+
+    ]
+
+    useEffect(() => {
+            const SingleDetail = data.filter((item: any) => item.id == params.id);
+            setSingleData(SingleDetail[0]);
+    }, [params.id])
 
     useEffect(() => {
         console.log(params.id);
@@ -85,7 +114,7 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
 
             <div className='flex items-start justify-start gap-[2rem] mt-[2.5rem]  900px:flex-col 900px:max-w-full '>
                 <div className='max-w-[770px] w-full rounded-[10px] border-[#E8E8E8] border-[1px]'>
-                    <Image className='w-full  h-[507px] custom-rounded object-cover' src={CarDetailImage} alt="car detail" />
+                    <Image className='w-full  h-[507px] custom-rounded object-cover' src={SingleData?.img ? SingleData?.img : "https://media.naijahouses.com/banner_image/no-preview.jpg"} alt="car detail" width={770} height={507} />
                     <div className='mt-[1.8rem] p-[1rem]'>
                         <div className='flex gap-[15px]'>
                             <div className='flex items-center gap-[4px]'>
