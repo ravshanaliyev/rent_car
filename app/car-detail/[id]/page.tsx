@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { Label } from "../../../components/ui/label";
@@ -21,6 +21,35 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
     const [date, setDate] = React.useState<Date>();
     const [pickupDate, setPickupDate] = React.useState<Date>();
     const [dropoffDate, setDropoffDate] = React.useState<Date>();
+
+    const [SingleData, setSingleData] = useState<any>();
+
+    console.log(SingleData);
+    
+
+    const data = [
+        {
+            id: 1,
+            name: 'Hyundai Accent Limited',
+            img: 'https://pixydrops.com/remons/assets/img/car/popular-car-1.jpg'
+        },
+        {
+            id: 2,
+            name: 'Hyundai Accent Limited',
+            img: 'https://pixydrops.com/remons/assets/img/car/popular-car-2.jpg'
+        },
+        {
+            id: 3,
+            name: 'Hyundai Accent Limited',
+            img: 'https://pixydrops.com/remons/assets/img/car/popular-car-3.jpg'
+        },
+
+    ]
+
+    useEffect(() => {
+            const SingleDetail = data.filter((item: any) => item.id == params.id);
+            setSingleData(SingleDetail[0]);
+    }, [params.id])
 
     useEffect(() => {
         console.log(params?.id);
@@ -83,19 +112,21 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
             <PageHero title={"Single Car"} />
             <div className='py-10  container'>
 
-                <div className='flex items-start justify-start gap-[2rem] mt-[2.5rem]  900px:flex-col 900px:max-w-full '>
-                    <div className='max-w-[770px] w-full rounded-[10px] border-[#E8E8E8] border-[1px]'>
-                        <Image className='w-full  h-[507px] custom-rounded object-cover' src={CarDetailImage} alt="car detail" />
-                        <div className='mt-[1.8rem] p-[1rem]'>
-                            <div className='flex gap-[15px]'>
-                                <div className='flex items-center gap-[4px]'>
-                                    <Image width={15} height={14} src={Star} alt="star" />
-                                    <Image width={15} height={14} src={Star} alt="star" />
-                                    <Image width={15} height={14} src={Star} alt="star" />
-                                    <Image width={15} height={14} src={Star} alt="star" />
-                                    <Image width={15} height={14} src={Star} alt="star" />
+
+            <div className='flex items-start justify-start gap-[2rem] mt-[2.5rem]  900px:flex-col 900px:max-w-full '>
+                <div className='max-w-[770px] w-full rounded-[10px] border-[#E8E8E8] border-[1px]'>
+                    <Image className='w-full  h-[507px] custom-rounded object-cover' src={SingleData?.img ? SingleData?.img : "https://media.naijahouses.com/banner_image/no-preview.jpg"} alt="car detail" width={770} height={507} />
+                    <div className='mt-[1.8rem] p-[1rem]'>
+                        <div className='flex gap-[15px]'>
+                            <div className='flex items-center gap-[4px]'>
+                                <Image width={15} height={14} src={Star} alt="star" />
+                                <Image width={15} height={14} src={Star} alt="star" />
+                                <Image width={15} height={14} src={Star} alt="star" />
+                                <Image width={15} height={14} src={Star} alt="star" />
+                                <Image width={15} height={14} src={Star} alt="star" />
                                 </div>
                                 <span className='text-[#0C142E] text-[15px] font-[500]'>2 Reviews</span>
+
                             </div>
                             <h4 className='font-[600] text-[#0c142e] text-[26px] mt-[1rem]'>Hyundai Accent Limited</h4>
                             <h5 className="text-[#005cb5] text-[17px] font-[700] mt-[1rem] pb-5 border-b border-gray-300">  $70.00 <span className="text-[#77797e] font-[400]">/ day</span> </h5>

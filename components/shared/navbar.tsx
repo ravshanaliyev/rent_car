@@ -12,10 +12,10 @@ const Navbar = () => {
                     <Image src={Logo} alt="logo" />
                 </Link>
                 <ul className='flex items-center gap-6 text-base'>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Cars</li>
-                    <li>Contact</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact" className="">Contact</a></li>
                 </ul>
                 <div className="flex items-center gap-3">
                     <Button size={'icon'} variant={'outline'} className='rounded-full p-2 h-10 w-10'><PhoneCall size={18} /></Button>
