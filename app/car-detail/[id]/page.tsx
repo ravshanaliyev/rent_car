@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { Popover, PopoverContent, PopoverTrigger, } from "@/components/ui/popover";
 import Image from "next/image";
-import CarDetailImage from "../../assets/images/car-details.webp"
 import Star from "../../assets/icons/star.png"
 import FeatureIcon from "../../assets/images/feature-icon.webp"
 import Navbar from "@/components/shared/navbar";
@@ -25,7 +24,7 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
     const [SingleData, setSingleData] = useState<any>();
 
     console.log(SingleData);
-    
+
 
     const data = [
         {
@@ -47,8 +46,8 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
     ]
 
     useEffect(() => {
-            const SingleDetail = data.filter((item: any) => item.id == params.id);
-            setSingleData(SingleDetail[0]);
+        const SingleDetail = data.filter((item: any) => item.id == params.id);
+        setSingleData(SingleDetail[0]);
     }, [params.id])
 
     useEffect(() => {
@@ -113,17 +112,17 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
             <div className='py-10  container'>
 
 
-            <div className='flex items-start justify-start gap-[2rem] mt-[2.5rem]  900px:flex-col 900px:max-w-full '>
-                <div className='max-w-[770px] w-full rounded-[10px] border-[#E8E8E8] border-[1px]'>
-                    <Image className='w-full  h-[507px] custom-rounded object-cover' src={SingleData?.img ? SingleData?.img : "https://media.naijahouses.com/banner_image/no-preview.jpg"} alt="car detail" width={770} height={507} />
-                    <div className='mt-[1.8rem] p-[1rem]'>
-                        <div className='flex gap-[15px]'>
-                            <div className='flex items-center gap-[4px]'>
-                                <Image width={15} height={14} src={Star} alt="star" />
-                                <Image width={15} height={14} src={Star} alt="star" />
-                                <Image width={15} height={14} src={Star} alt="star" />
-                                <Image width={15} height={14} src={Star} alt="star" />
-                                <Image width={15} height={14} src={Star} alt="star" />
+                <div className='flex items-start justify-start gap-[2rem] mt-[2.5rem]  900px:flex-col 900px:max-w-full '>
+                    <div className='max-w-[770px] w-full rounded-[10px] border-[#E8E8E8] border-[1px]'>
+                        <Image className='w-full  h-[507px] custom-rounded object-cover' src={SingleData?.img ? SingleData?.img : "https://media.naijahouses.com/banner_image/no-preview.jpg"} alt="car detail" width={770} height={507} />
+                        <div className='mt-[1.8rem] p-[1rem]'>
+                            <div className='flex gap-[15px]'>
+                                <div className='flex items-center gap-[4px]'>
+                                    <Image width={15} height={14} src={Star} alt="star" />
+                                    <Image width={15} height={14} src={Star} alt="star" />
+                                    <Image width={15} height={14} src={Star} alt="star" />
+                                    <Image width={15} height={14} src={Star} alt="star" />
+                                    <Image width={15} height={14} src={Star} alt="star" />
                                 </div>
                                 <span className='text-[#0C142E] text-[15px] font-[500]'>2 Reviews</span>
 
