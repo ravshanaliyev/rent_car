@@ -112,7 +112,7 @@ const CarDetail = ({ params }: { params: { id: string } }) => {
         <PageHero title={"Single Car"}/>
         <div className='py-10  container'>
 
-            <div className='flex items-start justify-start gap-[2rem] mt-[2.5rem]  900px:flex-col 900px:max-w-full '>
+            <div className='flex items-start justify-start gap-[2rem] mt-[2.5rem] lg:flex-row flex-col '>
                 <div className='max-w-[770px] w-full rounded-[10px] border-[#E8E8E8] border-[1px]'>
                     <Image className='w-full  h-[507px] custom-rounded object-cover' src={SingleData?.img ? SingleData?.img : "https://media.naijahouses.com/banner_image/no-preview.jpg"} alt="car detail" width={770} height={507} />
                     <div className='mt-[1.8rem] p-[1rem]'>
