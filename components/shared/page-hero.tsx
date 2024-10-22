@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 
 
-const PageHero = ({ title }: any) => {
+const PageHero = ({ title }: { title: string }) => {
   return (
     <div className="relative w-full h-[380px]">
       {/* Image */}

@@ -2,8 +2,6 @@ import React from 'react'
 import SubIcon from "../../app/assets/images/sub-icon.webp"
 import Image from 'next/image'
 import Staricon from "../../app/assets/icons/star.png"
-import { jsx } from 'react/jsx-runtime'
-// import Seaticon from "../../app/assets/icons/"
 
 
 const OfferCars = () => {
@@ -31,14 +29,14 @@ const OfferCars = () => {
             <header className='text-center w-full'>
                 <Image className='w-[60px] object-contain h-[10px] mx-auto mb-[12px]' src={SubIcon} alt="sub-icon" />
                 <h6 className='text-[#ff3726] font-medium'>CHECKOUT OUR NEW CARS</h6>
-                <h2 className='mt-[15px] mx-[auto] text-[50px] font-semibold text-[#0C142E] max-w-[580px] leading-[65px]'>Cars We're Offering For Rentals</h2>
+                <h2 className='mt-[15px] mx-[auto] text-[50px] font-semibold text-[#0C142E] max-w-[580px] leading-[65px]'>Cars We&lsquo;re Offering For Rentals</h2>
             </header>
             <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-[4rem]'>
                 {
                     data.map((item) => (
                         <div key={item.id} className="car-card relative w-full  max-w-[400px] rounded-xl bg-white  shadow-lg overflow-hidden  transition duration-500  hover:shadow-2xl " >
                             <div className=' max-w-[400px] w-full '>
-                            <Image src={item.img} alt={item.name} className="car-image w-full transition-transform duration-300 transform  object-cover h-[266px] " width={400} height={266} />
+                                <Image src={item.img} alt={item.name} className="car-image w-full transition-transform duration-300 transform  object-cover h-[266px] " width={400} height={266} />
                             </div>
                             <div className='py-[35px] px-[25px] relative'>
                                 <button className='py-[8px] px-[14px] rounded-[10px] bg-[#005cb5] text-[14px] text-white absolute top-[-20px] right-[25px]'>2024 Model</button>
