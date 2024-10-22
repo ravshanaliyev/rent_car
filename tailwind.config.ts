@@ -9,6 +9,7 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			
 			container: {
 				center: true,
 				padding: "2rem",
@@ -63,7 +64,8 @@ const config: Config = {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
 				// cst: 'calc(var(--radius) - 10px)',
-			}
+			},
+			
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
