@@ -2,14 +2,14 @@
 import PageHero from '@/components/shared/page-hero';
 import Image from 'next/image';
 import React from "react";
-import LogoIcon from "../assets/images/sub-icon.webp"
-import EmailIcon from "../assets/icons/email.webp"
-import LocationIcon from "../assets/icons/location.webp"
-import QuestionIcon from "../assets/icons/question.webp"
+import LogoIcon from "../assets/images/sub-icon.webp";
+import EmailIcon from "../assets/icons/email.webp";
+import LocationIcon from "../assets/icons/location.webp";
+import QuestionIcon from "../assets/icons/question.webp";
 import Navbar from '@/components/shared/navbar';
-import Iframe from 'react-iframe'
-import ContactAside from "../assets/images/contactAside.webp"
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube, } from "react-icons/fa";
+import Iframe from 'react-iframe';
+import ContactAside from "../assets/images/contactAside.webp";
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 import Footer from '@/components/shared/footer';
 
 const Contact = () => {
@@ -20,11 +20,10 @@ const Contact = () => {
 
             {/* Main Section */}
             <div className='relative'>
-
-                <section style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px' }} className="container  py-[30px] rounded-[10px] mt-[50px] max-w-[1170px] w-full flex flex-col md:flex-row gap-8 ">
+                <section style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px' }} className="container py-[30px] rounded-[10px] mt-[50px] max-w-[1170px] w-full flex flex-col md:flex-row gap-8 ">
                     {/* Form Section */}
-                    <div className="p-6 rounded-[10px] max-w-[780px] w-full  ">
-                        <div className='flex items-start flex-col w-full  justify-start text-left'>
+                    <div className="p-6 rounded-[10px] max-w-[780px] w-full">
+                        <div className='flex items-start flex-col w-full justify-start text-left'>
                             <Image src={LogoIcon} alt="logo" className="w-full h-auto object-contain max-w-[60px] mb-[12px]" />
                             <p className='text-[#ff3726] font-[600] text-[18px] mt-[5px]'>CONTACT US</p>
                         </div>
@@ -39,9 +38,11 @@ const Contact = () => {
                             <div>
                                 <input type="email" className="w-full h-[55px] p-3 rounded-md bg-[#F3F7FB] text-[16px] text-[#77797e] font-semibold" placeholder="Your Email" />
                             </div>
-                            <div> <input type="text" className="w-full h-[55px] p-3 rounded-md bg-[#F3F7FB] text-[16px] text-[#77797e] font-semibold" placeholder="Subject" />
+                            <div>
+                                <input type="text" className="w-full h-[55px] p-3 rounded-md bg-[#F3F7FB] text-[16px] text-[#77797e] font-semibold" placeholder="Subject" />
                             </div>
-                            <div><input type="text" className="w-full h-[55px] p-3 rounded-md bg-[#F3F7FB] text-[16px] text-[#77797e] font-semibold" placeholder="Phone Number" />
+                            <div>
+                                <input type="text" className="w-full h-[55px] p-3 rounded-md bg-[#F3F7FB] text-[16px] text-[#77797e] font-semibold" placeholder="Phone Number" />
                             </div>
                         </div>
 
@@ -59,7 +60,7 @@ const Contact = () => {
                     </div>
 
                     {/* Sidebar Section */}
-                    <div className="p-6 w-full max-w-[300px] ">
+                    <div className="p-6 w-full max-w-[300px]">
                         <Image src={ContactAside} alt="contact aside" className="w-full max-w-[235px] h-[98px] object-contain" />
                         <div className="flex flex-col gap-4 mt-[2rem]">
                             <div className="flex items-center gap-4 border-b border-[#E8E8E8] pb-4">
@@ -88,28 +89,25 @@ const Contact = () => {
                         </div>
 
                         {/* Social Icons */}
-                        <div className="flex gap-4 justify-center mt-[2rem] ">
-                            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube].map(
-                                (Icon, index) => (
-                                    <button
-                                        key={index}
-                                        className="text-[18px]  p-[12px] bg-[#F3F7FB] rounded-[50%] text-blue-950 hover:bg-red-600 hover:text-white transition-all"
-                                    >
-                                        <Icon />
-                                    </button>
-                                )
-                            )}
+                        <div className="flex gap-4 justify-center mt-[2rem]">
+                            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube].map((Icon, index) => (
+                                <button key={index} className="text-[18px] p-[12px] bg-[#F3F7FB] rounded-[50%] text-blue-950 hover:bg-red-600 hover:text-white transition-all">
+                                    <Icon />
+                                </button>
+                            ))}
                         </div>
                     </div>
                 </section>
+
+                {/* Google Maps Iframe */}
                 <Iframe
-                    url="https://maps.google.com/maps?q=Tashkent%20Dates%10Products&amp;t=&amp;z=12&amp;output=embed"
+                    url="https://maps.google.com/maps?q=Tashkent%20Dates%20Products&amp;t=&amp;z=12&amp;output=embed"
                     allowFullScreen
-                    frameBorder={"0"}
                     id='location'
                     className='w-full h-[420px] mt-[2rem] mb-[.6rem]'
                 />
             </div>
+
             <Footer />
         </div>
     );
