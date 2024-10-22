@@ -23,13 +23,21 @@ const Footer = () => {
     <footer className="bg-slate-900 text-white">
       <div className="py-4">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center gap-4">
+          <div
+            className="flex items-center gap-4 "
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <Image src={logo} alt="Company Logo" className="w-28 h-auto" />
             <p className="text-lg font-bold">
               Save big with our cheap car rental
             </p>
           </div>
-          <div className="flex gap-3 mt-4 md:mt-0">
+          <div
+            className="flex gap-3 mt-4 md:mt-0"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             {[FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube].map(
               (Icon, index) => (
                 <button
@@ -47,7 +55,7 @@ const Footer = () => {
       <div className="bg-[url('/scr/assets/images/bg-light-footer.webp')] bg-cover bg-center py-10">
         <div className="bg-slate-900 bg-opacity-80 py-10">
           <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
+            <div data-aos="fade-up" data-aos-duration="2000">
               <h2 className="font-bold text-xl">Contact</h2>
               <p className="mt-4 text-gray-400">
                 66 Road Broklyn Golden Street, 600 New York, USA
@@ -62,7 +70,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div>
+            <div data-aos="fade-up" data-aos-duration="3000">
               <h2 className="font-bold text-2xl">Quick Links</h2>
               <ul className="mt-4 space-y-2 text-gray-400">
                 {[
@@ -82,7 +90,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div data-aos="fade-up" data-aos-duration="2000">
               <h2 className="font-bold text-xl">Gallery</h2>
               <div className="grid grid-cols-3 gap-2 mt-4">
                 {Array(6)
@@ -94,7 +102,9 @@ const Footer = () => {
                       key={index}
                       className="relative w-full h-16 rounded-lg overflow-hidden group"
                     >
+
                       <img
+
                         src={imgSrc}
                         alt={`Gallery ${index}`}
                         className="w-full h-full object-cover"
@@ -107,7 +117,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div>
+            <div data-aos="fade-up" data-aos-duration="3000">
               <h2 className="font-bold text-xl">Newsletter</h2>
               <p className="mt-4 text-gray-400">
                 Subscribe to our newsletter to get the latest updates and news.
@@ -125,8 +135,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Bottom Section */}
-          <div className="mt-10 border-t border-white/20 pt-6 text-center text-gray-400">
+          <div className="mt-10 border-t border-white/20 pt-7 text-center text-gray-400">
             © 2024 by Remons.com. All rights reserved.
           </div>
         </div>
