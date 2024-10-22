@@ -11,7 +11,6 @@ import Iframe from 'react-iframe'
 import ContactAside from "../assets/images/contactAside.webp"
 import { FaFacebookF, FaLinkedinIn, FaTelegram, FaTwitter, FaYoutube,} from "react-icons/fa";
 import Footer from '@/components/shared/footer';
-import Map from '@/components/shared/map';
 
 const Contact = () => {
     return (
@@ -46,12 +45,10 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Text Area */}
                     <div className="mt-4">
                         <textarea rows={5} className="w-full p-3 rounded-md bg-[#F3F7FB] text-[16px] text-[#77797e] font-semibold" placeholder="Write a Comment" />
                     </div>
 
-                    {/* Submit Button */}
                     <div className="mt-6">
                         <button className="bg-[#f53d2d] text-white font-semibold text-[16px] py-3 px-6 rounded hover:bg-[#ff473f] transition-all">
                             Send A Message
